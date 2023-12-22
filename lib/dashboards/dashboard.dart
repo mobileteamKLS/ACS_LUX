@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:luxair/otherpages/bookedslotslist.dart';
 import 'package:luxair/otherpages/slotlist.dart';
+import 'package:luxair/otherpages/trackAndTrace.dart';
 import 'package:luxair/otherpages/viewslotbooking.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
@@ -793,6 +794,16 @@ class _DashboardsState extends State<Dashboards> {
                       "View",
                       "Booked Slots",
                       BookedSlotsList(),
+                      useMobileLayout),
+
+                if (isTrucker || isTruckerFF)
+                  DashboardBlocks(
+                      Color(0xFFa8c0ff),
+                      Color(0xFF4364F7),
+                      Icons.not_listed_location_outlined,
+                      "Track &",
+                      "Trace",
+                      TrackAndTrace(),
                       useMobileLayout),
 
                 if (isTPS)
